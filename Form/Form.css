@@ -1,0 +1,212 @@
+    .section-title {
+      background-color: #0099cc;
+      color: white;
+      padding: 5px 10px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .form-control[readonly] {
+      background-color: #aaa5a5;
+      
+    }
+  label{
+
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight:bolder;
+  margin-bottom: 1px;
+ 
+
+
+  }
+ 
+ .InscricaoMunicipal{
+margin-left: 202px;
+
+  }
+  #CNPJ{
+ width: 410px;
+    margin-left: 222px;
+
+
+  }
+  #RazaoSocial{
+  width: 860px;
+
+
+
+  }
+  #NPC{
+width: 680px
+
+
+  }
+  #Telefone{
+
+width: 300px;
+margin-left: 250px;
+
+
+  }
+#Endereco{
+  width: 860px;
+
+
+
+
+}
+  .Municipio{
+margin-left: 80px;
+width: 467px;
+  }
+  #Municipio{
+margin-left: 80px;
+width: 467px;
+  }
+  #email{
+width: 290px;
+margin-left: 120px;
+ }
+   .Estado{
+width: 290px;
+margin-left: 120px;
+}
+  #Estado{
+width: 290px;
+margin-left: 120px;
+}
+  #Bairro{
+width: 500px;
+
+
+  }
+  #NomeFantasia{
+  width: 860px;
+  }
+  #InscricaoEstadual{
+    margin-left: 220px;
+ width: 410px;
+  }
+
+  #InscricaoMunicipal{
+    
+    width: 410px;
+    margin-left: 440px;
+  }
+    .btn {
+  background-color: #28a745;
+      border: none;
+      color: white;
+      font-weight: 600;
+      width: 100%;
+      padding: 12px 0;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+     .header-anexos {
+      background-color: #0081bd;
+      color: white;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+.card-anexos {
+  width: 100%;
+}
+
+    
+    .item-anexo {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 8px 10px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+    .btn-lixeira {
+      background-color: #d63031;
+      border: none;
+      color: white;
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn-olho {
+      background-color: #0984e3;
+      border: none;
+      color: white;
+      margin-right: 15px;
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nome-anexo {
+      font-size: 1rem;
+    }
+    .btn-green-large {
+      background-color: #28a745;
+      border: none;
+      color: white;
+      font-weight: 600;
+      width: 100%;
+      padding: 12px 0;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .btn-green-large:hover {
+      background-color: #218838;
+    }
+   #containerMedida{
+    display:flex;
+    flex-direction: column;
+
+
+
+   }
+   .form-control{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 7px;
+   }
+
+  .select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 40px 8px 12px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  .select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    pointer-events: none;
+    font-size: 14px;
+    margin-right: -12px;
+    height:40px;
+  }

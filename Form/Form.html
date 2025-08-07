@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro Fornecedor</title>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Form.css">
+  
+</head>
+<body class="p-4">
+<div style="justify-items: center; width: 20000;font-family:Arial, Helvetica, sans-serif "><h1>Cadastro fornecedor</h1></div>
+</div>
+  <div class="header-anexos mb-2">Dados do Fornecedor</div>
+  <form id="formulario" class="border rounded p-3 mb-3 linha-produto" onsubmit="Formulario(event)">
+ <div class="card mb-4">
+    <div class="row g-2" class="border rounded p-3 mb-3 linha-produto" >
+
+      <div class="col-md-6">
+        <label class="form-label"id="RazaoSocial">Razão Social</label>
+        <input type="text" class="form-control" id="RazaoSocial">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" id="CNPJ">CNPJ</label>
+        <input type="text" class="form-control" id="CNPJ">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" id="NomeFantasia" >Nome Fantasia</label>
+        <input type="text" class="form-control" id="NomeFantasia">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"id="InscricaoEstadual">Inscrição Estadual</label>
+        <input type="text" class="form-control" id="InscricaoEstadual">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">CEP</label>
+        <input type="text" class="form-control" id="CEP" onblur="BuscarCEP(this.value)">
+      </div>
+      <div class="col-md-8">
+        <label class="form-label"id='InscricaoMunicipal'>Inscrição Municipal</label>
+        <input type="text" class="form-control" id="InscricaoMunicipal">
+      </div>
+
+      <div class="col-md-8">
+        <label class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="Endereco">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label"id="Número">Número</label>
+        <input type="text" class="form-control" id="Numero">
+      </div>
+
+      <div class="col-md-12">
+        <label class="form-label" id="Complemento">Complemento</label>
+        <input type="text" class="form-control" id="Complemento">
+      </div>
+
+      <div class="col-md-4">
+        <label class="Bairro" fo="Bairro">Bairro</label>
+        <input type="text" class="form-control" id="Bairro">
+      </div>
+      <div class="col-md-4">
+        <label class="Municipio"   for="Municipio"   >Município</label>
+        <input type="text" class="form-control" id="Municipio">
+      </div>
+      <div class="col-md-4">
+        <label class="Estado" for="Estado">Estado</label>
+        <input type="text" class="form-control" id="Estado">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Nome da Pessoa de Contato</label>
+        <input type="text" class="form-control" id="NPC">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" id="Telefone">Telefone</label>
+        <input type="text" class="form-control" id="Telefone">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label"id='email'>E-mail</label>
+        <input type="email" class="form-control" id="email" >
+      </div>
+    </div>
+</div>
+ 
+
+
+
+
+
+
+
+
+
+<!---PRODUTO-->
+  
+      
+    <div class="header-anexos mb-2">Produtos</div>
+      <div class="border rounded p-3 mb-3 linha-produto">
+        <h6>Produto</h6>
+
+        <div class="row g-2">
+          <div class="col-md-12">
+           
+            <input type="text" class="form-control" id="nomeProduto">
+          </div>
+
+  
+<div class="col-md-3">
+  <label class="form-label">UND. Medida</label>
+  <div class="select-wrapper">
+    <select id="medida" onchange="calculoVal()">
+      <option value=""></option>
+      <option value="UN">UN</option>
+      <option value="KG">KG</option>
+      <option value="CX">CX</option>
+    </select>
+  </div>
+</div>
+
+          <div class="col-md-3">
+            <label class="form-label">QTD em Estoque</label>
+            <input type="number" class="form-control " id="QTD"onchange="calculoVal()">
+          </div>
+
+          <div class="col-md-3">
+            <label class="form-label">Valor Unitário</label>
+            <input type="number" class="form-control" id="Unitário"onchange="calculoVal()">
+          </div>
+
+          <div class="col-md-3">
+            <label class="form-label">Valor Total</label>
+            <input type="text" class="form-control "id='valor' readonly>
+          </div>
+
+        </div>
+          
+    <div id="produtos-container"></div>
+      </div>
+    
+
+    <button type="button" class="btn btn-primary mb-3 w-100" onclick="adicionarProduto()">Adicionar Produto</button>
+
+
+ 
+ 
+</head> 
+<!---------ANEXOS-->
+<body class="p-4">
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="header-anexos mb-2">Anexos</div>
+
+    <div class="border rounded p-3 mb-3">
+      <div class="mb-3 font-weight-bold" style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">Itens</div>
+
+      <div id="listaAnexos">
+        <div class="text-muted">Nenhum anexo incluído.</div>
+      </div>
+
+      <button id="btnIncluirAnexo" type="button" class="btn btn-primary w-100">Incluir Anexo</button>
+      <input type="file" id="inputAnexoFile" style="display:none" multiple>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalLoading" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content text-center p-4">
+      <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+        <span class="sr-only">Carregando...</span>
+      </div>
+      <h5>Salvando fornecedor...</h5>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <button id="btnSalvarFornecedor" type="submit" class="btn btn-primary w-100">Salvar Fornecedor</button>
+  </div>
+</div>
+
+
+
+
+
+
+  </form>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script src="Form.js"></script>
+
+
+</body>
+</html>
